@@ -10,7 +10,8 @@ This project, undertaken in 2022, delves into the fascinating world of Fourier T
 
 The Fourier Transform is a mathematical tool that transforms a function of time (or space) into a representation in the frequency domain. For a periodic function, the Fourier Series expansion can be expressed as:
 
-\[ f(t) = a_0 + \sum_{n=1}^{\infty} \left( a_n \cos(2\pi nft) + b_n \sin(2\pi nft) \right) \]
+![Fourier Series](https://latex.codecogs.com/svg.latex?%5Csmall%20f(t)%20=%20a_0%20+%20%5Csum_%7Bn=1%7D%5E%7B%5Cinfty%7D%20%5Cleft(a_n%20%5Ccos(2%5Cpi%20nft)%20+%20b_n%20%5Csin(2%5Cpi%20nft)%5Cright))
+
 
 where \(f(t)\) is the function, \(a_0\), \(a_n\), and \(b_n\) are coefficients, \(n\) is the harmonic number, \(f\) is the frequency, and \(t\) is time.
 
@@ -18,7 +19,8 @@ where \(f(t)\) is the function, \(a_0\), \(a_n\), and \(b_n\) are coefficients, 
 
 For a non-periodic function, the Fourier Transform is defined as:
 
-\[ F(\omega) = \int_{-\infty}^{\infty} f(t) \cdot e^{-i\omega t} \, dt \]
+![Fourier Transform](https://latex.codecogs.com/svg.latex?%5Csmall%20F(%5Comega)%20=%20%5Cint_%7B-%5Cinfty%7D%5E%7B%5Cinfty%7D%20f(t)%20%5Ccdot%20e%5E%7B-i%5Comega%20t%7D%20dt)
+
 
 where \(F(\omega)\) is the Fourier Transform, \(f(t)\) is the function in the time domain, \(\omega\) is the angular frequency, and \(i\) is the imaginary unit.
 
