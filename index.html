@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourier Transform Visualizer</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Fourier Transform Visualizer</h1>
+            <p class="subtitle">Draw any path and watch it come to life through rotating circles</p>
+        </header>
+
+        <div class="main-content">
+            <div class="sidebar">
+                <div class="control-section">
+                    <h3>Presets</h3>
+                    <div class="button-grid">
+                        <button class="preset-btn" data-preset="circle">Circle</button>
+                        <button class="preset-btn" data-preset="square">Square</button>
+                        <button class="preset-btn" data-preset="triangle">Triangle</button>
+                        <button class="preset-btn" data-preset="star">Star</button>
+                        <button class="preset-btn" data-preset="heart">Heart</button>
+                        <button class="preset-btn" data-preset="spiral">Spiral</button>
+                    </div>
+                </div>
+
+                <div class="control-section">
+                    <h3>Drawing Mode</h3>
+                    <button id="drawModeBtn" class="control-btn">Enable Drawing</button>
+                    <button id="clearDrawingBtn" class="control-btn secondary">Clear Drawing</button>
+                </div>
+
+                <div class="control-section">
+                    <h3>Controls</h3>
+                    <div class="control-group">
+                        <label for="vectorSlider">
+                            Epicycles: <span id="vectorCount">50</span>
+                        </label>
+                        <input type="range" id="vectorSlider" min="1" max="200" value="50" step="1">
+                    </div>
+
+                    <div class="control-group">
+                        <label for="speedSlider">
+                            Speed: <span id="speedValue">1.0x</span>
+                        </label>
+                        <input type="range" id="speedSlider" min="0.1" max="3" value="1" step="0.1">
+                    </div>
+
+                    <div class="control-group">
+                        <label for="trailSlider">
+                            Trail Length: <span id="trailValue">100%</span>
+                        </label>
+                        <input type="range" id="trailSlider" min="10" max="100" value="100" step="5">
+                    </div>
+
+                    <div class="toggle-group">
+                        <label class="toggle">
+                            <input type="checkbox" id="showCircles" checked>
+                            <span>Show Circles</span>
+                        </label>
+                        <label class="toggle">
+                            <input type="checkbox" id="showVectors" checked>
+                            <span>Show Vectors</span>
+                        </label>
+                        <label class="toggle">
+                            <input type="checkbox" id="showPath" checked>
+                            <span>Show Path</span>
+                        </label>
+                    </div>
+
+                    <button id="playPauseBtn" class="control-btn primary">Pause</button>
+                    <button id="resetBtn" class="control-btn secondary">Reset</button>
+                </div>
+
+                <div class="control-section">
+                    <h3>Theme</h3>
+                    <button id="themeToggle" class="control-btn">Toggle Theme</button>
+                </div>
+
+                <div class="info-section">
+                    <h4>About</h4>
+                    <p>This visualizer demonstrates how any path can be drawn using rotating circles (epicycles) based on the Discrete Fourier Transform.</p>
+                    <p>Each circle represents a frequency component, and their combined rotation traces the original path.</p>
+                </div>
+            </div>
+
+            <div class="canvas-container">
+                <canvas id="canvas"></canvas>
+                <div id="fpsCounter">FPS: 60</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/complex.js"></script>
+    <script src="js/fourier.js"></script>
+    <script src="js/presets.js"></script>
+    <script src="js/drawing.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
