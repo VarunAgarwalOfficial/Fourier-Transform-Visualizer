@@ -172,5 +172,47 @@ const Presets = {
         }
 
         return points;
+    },
+
+    /**
+     * Generate a Lissajous curve
+     */
+    lissajous: function(centerX, centerY, size, numPoints = 100) {
+        const points = [];
+        const a = 3; // frequency of x
+        const b = 4; // frequency of y
+        const delta = Math.PI / 2; // phase shift
+
+        for (let i = 0; i < numPoints; i++) {
+            const t = (i / numPoints) * Math.PI * 2;
+            points.push({
+                x: centerX + size * Math.sin(a * t + delta),
+                y: centerY + size * Math.sin(b * t)
+            });
+        }
+
+        return points;
+    },
+
+    /**
+     * Generate a rose curve
+     */
+    rose: function(centerX, centerY, size, numPoints = 100) {
+        const points = [];
+        const n = 5; // number of petals (if odd) or 2n (if even)
+        const d = 3; // denominator
+
+        for (let i = 0; i < numPoints; i++) {
+            const theta = (i / numPoints) * Math.PI * 2;
+            const k = n / d;
+            const r = size * Math.cos(k * theta);
+
+            points.push({
+                x: centerX + r * Math.cos(theta),
+                y: centerY + r * Math.sin(theta)
+            });
+        }
+
+        return points;
     }
 };
