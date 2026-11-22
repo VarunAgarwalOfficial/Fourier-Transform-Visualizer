@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+venv/
+
+# JavaScript
+node_modules/
+
+# OS
+.DS_Store
