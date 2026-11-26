@@ -1,5 +1,7 @@
 # Fourier Series Drawings with Epicycles
 
+> **Archived.** Superseded by [visual-algorithms](https://github.com/VarunAgarwalOfficial/visual-algorithms), which includes the Fourier epicycles demo. This repository is kept as a record and is read-only.
+
 Draws an outline using a chain of rotating circles (epicycles) whose sizes, speeds and starting angles come from the discrete Fourier transform of the outline's points. The same idea is implemented twice: in Python with Pygame and in JavaScript with p5.js.
 
 ![Epicycles tracing an outline](screenshots/1.gif)
